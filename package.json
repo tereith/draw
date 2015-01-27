@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tabor69/draw/issues"
   },
-  "homepage": "https://github.com/tabor69/draw"
+  "homepage": "https://github.com/tabor69/draw",
+  "devDependencies": {
+    "gulp": "^3.8.10"
+  }
 }
