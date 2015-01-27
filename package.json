@@ -1,0 +1,19 @@
+{
+  "name": "draw",
+  "version": "0.0.1",
+  "description": "Simple app for testing Node js and HTML canvas",
+  "main": "draw.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tabor69/draw.git"
+  },
+  "author": "Terje Eithun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabor69/draw/issues"
+  },
+  "homepage": "https://github.com/tabor69/draw"
+}
