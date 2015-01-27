@@ -6,6 +6,11 @@
 var http = require("http");
 
 http.createServer(function(req, res) {
-    res.write("Hello Draw!");
+    var body = "<h1>Hello Draw!</h1>";
+    res.writeHead(200, {
+        "Content-Length" : body.length,
+        "Content-Type": "text/html"
+    });
+    res.write(body);
     res.end();
 }).listen(3000);
