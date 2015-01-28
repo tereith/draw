@@ -19,4 +19,9 @@ function start () {
     console.log("* Server Started *");
 }
 
+function helloWorld () {
+    return "Hello World!";
+}
+
+exports.hello = helloWorld;
 exports.start = start;
