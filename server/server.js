@@ -7,8 +7,9 @@ function start () {
     function onRequest(request, response) {
         console.log(" - request received..");
         var body = "Hello Draw!";
+        
         response.writeHead(200, {
-            "Content-Type" : "text/length"
+            "Content-Type" : "text/plain"
         });
         response.write(body);
         response.end();
