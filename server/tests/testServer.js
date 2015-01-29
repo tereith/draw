@@ -2,29 +2,17 @@
  * Created by teithun on 28.01.2015.
  */
 
-var request = require("supertest");
-var app = require("./../../draw.js");
+var request = require('superagent');
+var expect = require('expect.js');
 
-var test = app.server.hello();
-console.log("app.hello: " + test);
-
-request(app)
-    .get("/")
-    .expect(200)
-    .end(function (err, res) {
-        if (err) throw err;
+describe('Suite one', function(){
+    it (function(done){
+        request.get('http://localhost:3000').end(function(res){
+            expect(res).to.exist;
+            expect(res.status).to.equal(200);
+            expect(res.body).to.contain('Hello Draw!');
+            done();
+        });
     });
+});
 
-/*
- app.get('/', function (req, res) {
- res.send(200, {});
- });
-
- request(app).get("/")
- .expect("Content-Type", "text/html")
- .expect(200)
- .end(function (err, res) {
- if (err) throw err;
- });
-
- */
