@@ -1,0 +1,15 @@
+html
+    head
+        title!= title
+        link(href="bootstrap/dist/css/bootstrap.css", rel='stylesheet')
+        link(href="openlayers3/build/ol.css", rel='stylesheet')
+        link(href="client.css", rel='stylesheet')
+    body
+        h1!= message
+        a(href="/", class="btn btn-primary") back
+        #map.map
+
+    //canvas(id= "canvas1", width= "700", height= "500" style= "background-color: E5E5E5")
+    script(src="jquery/dist/jquery.js")
+    script(src="openlayers3/build/ol-debug.js")
+    script(src="map-client.js")

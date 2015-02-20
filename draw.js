@@ -34,6 +34,10 @@ app.get('/', function (req, res) {
     res.render("index", {title: "** Draw **", message: "Hello Draw"});
 })
 
+app.get('/map', function (req, res) {
+    res.render("map", {title: "** Map **", message: "OpenLayers 3 example"});
+})
+
 var server = app.listen(3000, function () {
 
     var host = server.address().address
