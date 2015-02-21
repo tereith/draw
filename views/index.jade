@@ -1,13 +1,6 @@
-html
-    head
-        title!= title
-        link(href="bootstrap/dist/css/bootstrap.css", rel='stylesheet')
-        link(href="client.css", rel='stylesheet')
-    body
-        h1!= message
-        a(href="/map", class="btn btn-primary") map
+extends ./layout.jade
 
-    //canvas(id= "canvas1", width= "700", height= "500" style= "background-color: E5E5E5")
-    script(src="jquery/dist/jquery.js")
-    script(src="d3/d3.js")
-    script(src="client.js")
+block content
+    h1!= message
+
+    #svg

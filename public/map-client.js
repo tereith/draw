@@ -1,22 +1,22 @@
-console.log("hello Map");
+var map;
+console.log("map-client.js loading...")
 
-
-
-
-var map = new ol.Map({
-    target: 'map',
-    layers: [
-        new ol.layer.Tile({
-            source: new ol.source.TileWMS({
-                url: "http://openwms.statkart.no/skwms1/wms.topo2?request=GetMap"
-            })
+function init(){
+    console.log("init....")
+    map = new ol.Map({
+        target:'map',
+        renderer:'canvas',
+        view: new ol.View({
+            projection: 'EPSG:900913',
+            center:[0,0],
+            zoom:5
         })
-    ],
-    view: new ol.View({
-        center: ol.proj.transform(
-            [10.35893, 63.34940],
-            'EPSG:4326', 'EPSG:3857'
-        ),
-        zoom: 16
-    })
-});
+    });
+    var newLayer = new ol.layer.Tile({
+        source: new ol.source.OSM()
+    });
+
+    map.addLayer(newLayer);
+}
+
+init();

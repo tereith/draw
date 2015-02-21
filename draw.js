@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.get('/', function (req, res) {
-    res.render("index", {title: "** Draw **", message: "Hello Draw"});
+    res.render("index", {title: "** Draw **", message: "D3 svg"});
 })
 
 app.get('/map', function (req, res) {
