@@ -1,17 +1,17 @@
-extends ./layout.jade
-
 head
+    link(href="bootstrap/dist/css/bootstrap.css", rel='stylesheet')
     link(href="openlayers3/build/ol.css", rel='stylesheet')
     link(href="client.css", rel='stylesheet')
     block scripts
         script(src="jquery/dist/jquery.js")
         script(src="bootstrap/dist/js/bootstrap.js")
         script(src="d3/d3.js")
-        script(src="openlayers3/build/ol.js")
+        script(src="openlayers3/build/ol-debug.js")
 
-
-
-block content
-    h1!= message
+body
+    .left-nav
+        h3!= message
+        a(href="/", class="btn btn-primary") home
+        a(href="/map", class="btn btn-primary") map
     #map.map
     script(src="map-client.js")
