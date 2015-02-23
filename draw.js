@@ -35,7 +35,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/map', function (req, res) {
-    res.render("map", {title: "** Map **", message: "OpenLayers 3 example"});
+    res.render("map", {title: "** Map **", message: "OpenLayers 3"});
 })
 
 var server = app.listen(3000, function () {

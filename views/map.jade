@@ -10,8 +10,11 @@ head
 
 body
     .left-nav
-        h3!= message
-        a(href="/", class="btn btn-primary") home
-        a(href="/map", class="btn btn-primary") map
+        .header
+            h2!= message
+        .content
+            a(href="/", class="btn btn-primary") home
+            a(href="/map", class="btn btn-primary") map
+            .coordinates
     #map.map
     script(src="map-client.js")
