@@ -14,8 +14,8 @@ ehthumbs.db
 Thumbs.db
 
 # SASS
-.sass-cache
-*.css
+#.sass-cache
+#*.css
 
 # Logs
 logs
