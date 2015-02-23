@@ -51,9 +51,11 @@ line {
     background-color: #FFF5CC;
     height: 60px;
     margin-top: 0;
+    border-bottom: 1px solid darkgray;
 }
 
 .left-nav {
+    border: 1px solid darkgray;
     background-color: lavender;
     height: 520px;
 }
@@ -72,6 +74,6 @@ line {
 }
 
 .left-nav .content .coordinates p {
-    padding: 6px;
+    padding: 10px;
     font-weight: bold;
 }

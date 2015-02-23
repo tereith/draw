@@ -21,6 +21,12 @@ function init() {
         //console.log(evt.coordinate);
         writeCoordinatesToHtml(evt.coordinate)
     });
+    
+    map.on("singleclick", function (evt) {
+        //console.log(evt);
+        //console.log(evt.coordinate);
+        writeCoordinatesToHtml(evt.coordinate)
+    });
 
     map.addLayer(openStreetMapLayer);
 }
@@ -35,7 +41,6 @@ function writeCoordinatesToHtml(coordinates) {
     console.log("y = " + y);
     /*$(".coordinates").css("background-color", "red");*/
     $(".coordinates").empty();
-    $(".coordinates").append("<p>x = " + x + "</p>");
-    $(".coordinates").append("<p>y = " + y + "</p>");
+    $(".coordinates").append("<p>x = " + x + "</br>y = " + y + "</p>");
 
 };
