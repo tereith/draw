@@ -19,14 +19,14 @@ function init() {
     map.on("singleclick", function (evt) {
         //console.log(evt);
         //console.log(evt.coordinate);
-        writeCoordinatesToHtml(evt.coordinate)
+        writeCoordinatesToHtml(evt.coordinate);
     });
     
-    map.on("singleclick", function (evt) {
+/*    map.on("singleclick", function (evt) {
         //console.log(evt);
         //console.log(evt.coordinate);
-        writeCoordinatesToHtml(evt.coordinate)
-    });
+        writeCoordinatesToHtml(evt.coordinate);
+    });*/
 
     map.addLayer(openStreetMapLayer);
 }

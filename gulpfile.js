@@ -33,7 +33,6 @@ gulp.task("shell", function() {
     } else {
         shell.mkdir(BUILD_DIR_PATH);
         shell.rm("-rf", "DELETE_ME");
-
     }
 
 });

@@ -2,8 +2,8 @@
  * Created by teithun on 27.01.2015.
  */
 
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
 
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -32,17 +32,17 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.get('/', function (req, res) {
     res.render("index", {title: "** Draw **", message: "D3 svg"});
-})
+});
 
 app.get('/map', function (req, res) {
     res.render("map", {title: "** Map **", message: "OpenLayers 3", coordmessage: "Click on map:"});
-})
+}) ;
 
 var server = app.listen(3000, function () {
 
-    var host = server.address().address
-    var port = server.address().port
+    var host = server.address().address;
+    var port = server.address().port;
 
-    console.log('Example app listening at http://%s:%s', host, port)
+    console.log('Example app listening at http://%s:%s', host, port);
 
-})
+});
