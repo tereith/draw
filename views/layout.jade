@@ -1,12 +1,13 @@
 html
     head
         title!= title
-        link(href="bootstrap/dist/css/bootstrap.css", rel='stylesheet')
-        link(href="client.css", rel='stylesheet')
+        link(href="/bootstrap/dist/css/bootstrap.css", rel='stylesheet')
+        link(href="/client.css", rel='stylesheet')
         block scripts
-            script(src="jquery/dist/jquery.js")
-            script(src="bootstrap/dist/js/bootstrap.js")
-            script(src="d3/d3.js")
+            script(src="/jquery/dist/jquery.js")
+            script(src="/bootstrap/dist/js/bootstrap.js")
+            script(src="/d3/d3.js")
+            script(src="/react/react.js")
     body
         .container
             .top-nav
@@ -15,4 +16,4 @@ html
                 a(href="/react", class="btn btn-primary") react
             block content
 
-        script(src="client.js")
+        script(src="/client.js")

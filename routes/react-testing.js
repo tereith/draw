@@ -12,7 +12,7 @@ router.use(function timeLog(req, res, next) {
 );
 
 router.get("/", function(req, res) {
-   res.render("../views/react", {title: "** React test **", message: "Testing React JS"});
+   res.render("react", {title: "** React test **", message: "Testing React JS"});
 });
 
 module.exports = router;
