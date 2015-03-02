@@ -1,10 +1,10 @@
 (function () {
-    "use strict"
+    "use strict";
 
     var map;
 
     (function init() {
-        console.log("init....")
+        console.log("init....");
         map = new ol.Map({
             target: 'map',
             renderer: 'canvas',
@@ -46,5 +46,5 @@
         $(".coordinates").empty();
         $(".coordinates").append("<p>x = " + x + "</br>y = " + y + "</p>");
 
-    };
+    }
 })();

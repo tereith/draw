@@ -25,10 +25,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "./public")));
 app.use(express.static(path.join(__dirname, "./bower_components")));
-app.use(express.static(path.join(__dirname, "./dist")));
+app.use(express.static(path.join(__dirname, "./build")));
 
 app.use("/react", reacttest);
-
 
 app.get("/", function (req, res) {
     res.render("index", {title: "** Draw **", message: "D3 svg"});
@@ -36,7 +35,7 @@ app.get("/", function (req, res) {
 
 app.get("/map", function (req, res) {
     res.render("map", {title: "** Map **", message: "OpenLayers 3", coordmessage: "Click on map:"});
-}) ;
+});
 
 
 // catch 404 and forward to error handler
