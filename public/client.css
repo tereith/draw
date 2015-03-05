@@ -5,7 +5,28 @@
 
 h1 {
     font-family: OpenSansLight;
-    font-size: 2.8em;
+    color: rgb(75, 75, 75);
+    font-size: 2.9em;
+}
+
+.teaser-box {
+    height: 125px;
+    width: 50%;
+    padding: 4px;
+    padding-left: 8px;
+    margin-bottom: 20px;
+    background-color: rgb(245, 245, 245);
+    webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition:width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.teaser-box a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 15px;
+    font-size: 2.2em;
+
 }
 
 #svg {
@@ -13,7 +34,8 @@ h1 {
 }
 
 .top-nav {
-    background-color: rgb(238, 238, 238);
+    /*background-color: rgb(245, 245, 245);*/
+    border-bottom: 3px solid rgb(145, 145, 145);
     margin-top: 8px;
     padding: 8px;
 }
