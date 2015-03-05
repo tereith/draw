@@ -1,15 +1,29 @@
+@font-face {
+    font-family: OpenSansLight;
+    src: url(fonts/OpenSans-Light.ttf);
+}
+
+h1 {
+    font-family: OpenSansLight;
+    font-size: 2.8em;
+}
+
 #svg {
     border: 1px solid lightgrey;
 }
 
 .top-nav {
-    background-color: lavender;
+    background-color: rgb(238, 238, 238);
     margin-top: 8px;
     padding: 8px;
 }
 
 .top-nav a {
-    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 15px;
+    font-size: 2em;
 }
 
 circle {
@@ -34,29 +48,28 @@ line {
     height: 600px;
     position: absolute;
     z-index: 2;
-    -webkit-box-shadow: 3px 5px 4px 1px rgba(0,0,0,0.71);
-    -moz-box-shadow: 3px 5px 4px 1px rgba(0,0,0,0.71);
-    box-shadow: 3px 5px 4px 1px rgba(0,0,0,0.71);
+    -webkit-box-shadow: 3px 5px 4px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 3px 5px 4px 1px rgba(0,0,0,0.25);
+    box-shadow: 3px 5px 4px 1px rgba(0,0,0,0.25);
 }
 
 .left-nav h2 {
-    color: #7A7ACC;
-    font-weight: bold;
+    font-family: OpenSansLight;
     margin-top: 0;
     padding-left: 30px;
     padding-top: 12px;
 }
 
 .left-nav .header {
-    background-color: #FFF5CC;
-    height: 60px;
+    background-color: rgb(238, 238, 238);
+    height: 90px;
     margin-top: 0;
     border-bottom: 1px solid darkgray;
 }
 
 .left-nav {
     border: 1px solid darkgray;
-    background-color: lavender;
+    background-color: rgb(255, 255, 255);
     height: 520px;
 }
 

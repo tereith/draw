@@ -27,7 +27,7 @@
         });
 
         $("#import-gpx-btn").click(function () {
-            confirm("Import GPX action here..");
+            confirm("Import GPX action here.. (not implemented yet)");
 /*            this.file().choose(function(e, input) {
                 alert(input.val()); //alerts the chosen filename.
             });*/
