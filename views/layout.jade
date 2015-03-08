@@ -2,22 +2,13 @@ html
     head
         title!= title
         link(href="/bootstrap/dist/css/bootstrap.css", rel='stylesheet')
-        link(href="/client.css", rel='stylesheet')
+        link(href="/css/client.css", rel='stylesheet')
         block scripts
             script(src="/jquery/dist/jquery.js")
             script(src="/bootstrap/dist/js/bootstrap.js")
-            script(src="/d3/d3.js")
-            script(src="/react/react.js")
-            //script(src="/react/JSXTransformer.js")
     body
         .container
-            .top-nav
-                a(href="/", class="topmenu-link") home
-                a(href="/", class="topmenu-link") about
-                //a(href="/d3", class="topmenu-link") d3
-                //a(href="/react", class="topmenu-link") react
-                //a(href="/map", class="topmenu-link") map
+            #react-test
             block content
 
-        #react-test
-        script(src="/client.js")
+        script(src="/app.js")

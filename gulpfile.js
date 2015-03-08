@@ -8,15 +8,16 @@ var uglify = require('gulp-uglify');
 var jshint = require("gulp-jshint");
 var nodemon = require("gulp-nodemon");
 var shell = require("shelljs");
-var BUILD_DIR_PATH = "build";
+var BUILD_DIR_PATH = "dist";
 var react = require("gulp-react");
+
 
 gulp.task("default", function () {
     nodemon({
         //verbose: true,
         script: "./draw.js",
         ext: "jade js jsx", 
-        ignore: ["build/*.js"]
+        ignore: ["dist/*.js"]
         })
         .on("start", ["shell", "lint", "compileJSX", "browserify"])
         .on("change", ["lint", "compileJSX", "browserify"])
@@ -32,15 +33,15 @@ gulp.task("shell", function () {
 });
 
 gulp.task("lint", function () {
-    gulp.src(["*.js", "/server/*.js", "public/*js"])
+    gulp.src(["*.js", "/server/*.js", "src/client/*js"])
         .pipe(jshint())
         .pipe(jshint.reporter("default"));
 });
 
 gulp.task("compileJSX", function () {
-    gulp.src("public/**/*.jsx")
+    gulp.src("src/client/**/*.jsx")
         .pipe(react({harmony: true}))
-        .pipe(gulp.dest("./public/_build"));
+        .pipe(gulp.dest("./src/client/_build"));
 });
 
 gulp.task('browserify', function () {
@@ -49,8 +50,8 @@ gulp.task('browserify', function () {
         return b.bundle();
     });
 
-    return gulp.src(['./public/_build/*.js'])
+    return gulp.src(['./src/client/_build/*.js'])
         .pipe(browserified)
         //.pipe(uglify())
-        .pipe(gulp.dest('./build'));
+        .pipe(gulp.dest('./dist'));
 });

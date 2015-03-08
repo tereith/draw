@@ -1,5 +1,6 @@
 (function () {
     "use strict";
+    var React = require("react");
 
     var ProductCategoryRow = React.createClass({
         render: function() {
@@ -123,6 +124,17 @@
         }
     });
 
+
+    var ReactDemo = React.createClass({
+        render: function() {
+            return (
+                <div>
+                    <FilterableProductTable products={fakeDB} />
+                </div>
+            );
+        }
+    });
+
     var fakeDB = [
         {category: "skate", brand: "Madshus", model: "Terrasonic Skate", price: "kr.1924", stocked: false},
         {category: "skate", brand: "Fisher", model: "SC Skate Nis", price: "kr.1259", stocked: true},
@@ -136,5 +148,8 @@
         {category: "classic", brand: "Salomon", model: "S-Lab Classic Warm Hard", price: "kr.4049", stocked: false}
     ];
 
-    React.render(<FilterableProductTable products={fakeDB} />, document.getElementById('test'));
+    //React.render(<FilterableProductTable products={fakeDB} />, document.getElementById('test'));
+    //React.render(<FilterableProductTable products={fakeDB} />, document.body);
+
+    module.exports = ReactDemo;
 })();

@@ -1,12 +1,47 @@
 @font-face {
     font-family: OpenSansLight;
-    src: url(fonts/OpenSans-Light.ttf);
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: red;
+    border-bottom: 3px solid rgb(145, 145, 145);
+}
+header ul li {
+    display: inline;
+    width: 160px;
+    margin-right: 20px;
+    font-size: 2.2em;
+}
+
+header ul li a {
+
 }
 
 h1 {
     font-family: OpenSansLight;
     color: rgb(75, 75, 75);
     font-size: 2.9em;
+}
+
+h2 {
+    font-family: OpenSansLight;
+    color: rgb(75, 75, 75);
+    font-size: 2.4em;
+}
+
+h3 {
+    font-family: OpenSansLight;
+    color: rgb(75, 75, 75);
+    font-size: 2.0em;
 }
 
 .teaser-box {
@@ -29,8 +64,20 @@ h1 {
 
 }
 
-#svg {
+.svg {
     border: 1px solid lightgrey;
+}
+
+.clock  {
+    font-family: OpenSansLight;
+    padding: 6px;
+    width: 275px;
+    color: rgb(150, 150, 150);
+    background-color: rgb(249, 249, 249);
+}
+.clock .time {
+    font-weight: bold;
+    font-size: 1.3em;
 }
 
 .top-nav {
