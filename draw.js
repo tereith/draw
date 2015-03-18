@@ -16,9 +16,12 @@ var d3 = require("./routes/d3-route");
 var map = require("./routes/map-route");
 */
 
+
 // view engine setup
+/**
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+ **/
+app.set('view engine', 'html');
 
 
 // uncomment after placing your favicon in /public
@@ -31,17 +34,17 @@ app.use(express.static(path.join(__dirname, "./src/client")));
 app.use(express.static(path.join(__dirname, "./src/server")));
 app.use(express.static(path.join(__dirname, "./bower_components")));
 app.use(express.static(path.join(__dirname, "./dist")));
+app.use(express.static(path.join(__dirname, "./build")));
 
 /*
 app.use("/react", react);
 app.use("/d3", d3);
 app.use("/map", map);
-*/
 
 app.get("/", function (req, res) {
     res.render("layout", {title: "** Sunrecorder **"});
 });
-
+*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

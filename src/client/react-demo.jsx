@@ -1,5 +1,4 @@
 (function () {
-    "use strict";
     var React = require("react");
 
     var ProductCategoryRow = React.createClass({
@@ -7,6 +6,7 @@
             return (<tr><th colSpan="2">{this.props.category}</th></tr>);
         }
     });
+
 
     var ProductRow = React.createClass({
         render: function() {

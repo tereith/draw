@@ -4,10 +4,10 @@
 
 var React = require("react");
 var Router = require("react-router");
-var ReactDemo = require("./react-demo");
-var D3Demo = require("./d3-demo");
-var About = require("./about");
-var Clock = require("./clock");
+var ReactDemo = require("./react-demo.jsx");
+var D3Demo = require("./d3-demo.jsx");
+var About = require("./about.jsx");
+var Clock = require("./clock.jsx");
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;

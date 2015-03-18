@@ -1,6 +1,5 @@
 (function () {
-    "use strict";
-
+    "use strict"
     var map;
 
     (function init() {

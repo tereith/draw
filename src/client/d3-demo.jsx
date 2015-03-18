@@ -7,7 +7,7 @@ var d3 = require("d3");
 
 var D3Demo = React.createClass({
 
-    componentDidMount() {
+    componentDidMount: function() {
         return getSvg();
     },
 
@@ -22,7 +22,6 @@ var D3Demo = React.createClass({
 });
 
 var getSvg = function() {
-
     return {
         svg: d3.select(".svg").append("svg:svg").attr("width", 960).attr("height", 500)
     }

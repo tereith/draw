@@ -1,17 +1,18 @@
 /**
  * Created by terjeeithun on 08/03/15.
  */
-
 var React = require("react");
 
 var ClockGui = React.createClass({
 
-    getInitialState() {
-        return {date: new Date()};
+    getInitialState: function(){
+        return {
+            date: new Date()
+        };
     },
 
     componentDidMount: function() {
-      this.timer = setInterval(this.update, 1000)
+      this.timer = setInterval(this.update, 1000);
     },
 
     formatDate: function(date) {
@@ -31,10 +32,10 @@ var ClockGui = React.createClass({
     },
 
     update: function() {
-      this.setState({date: new Date()});
+      this.setState({date: new Date()})
     },
 
-    componentWillUnmount() {
+    componentWillUnmount: function() {
       clearInterval(this.timer);
     },
 

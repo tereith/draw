@@ -4,23 +4,24 @@
 var gulp = require("gulp");
 var browserify = require('browserify');
 var transform = require('vinyl-transform');
+var source = require("vinyl-source-stream");
 var uglify = require('gulp-uglify');
 var jshint = require("gulp-jshint");
 var nodemon = require("gulp-nodemon");
 var shell = require("shelljs");
 var BUILD_DIR_PATH = "dist";
 var react = require("gulp-react");
-
+var reactify = require("reactify");
 
 gulp.task("default", function () {
     nodemon({
         //verbose: true,
         script: "./draw.js",
-        ext: "jade js jsx", 
+        ext: "jade js jsx html",
         ignore: ["dist/*.js"]
         })
-        .on("start", ["shell", "lint", "compileJSX", "browserify"])
-        .on("change", ["lint", "compileJSX", "browserify"])
+        .on("start", ["browserify"])
+        .on("change", ["browserify"])
         .on("restart", function () {
             console.log("restarted!");
         });
@@ -38,20 +39,12 @@ gulp.task("lint", function () {
         .pipe(jshint.reporter("default"));
 });
 
-gulp.task("compileJSX", function () {
-    gulp.src("src/client/**/*.jsx")
-        .pipe(react({harmony: true}))
-        .pipe(gulp.dest("./src/client/_build"));
-});
 
-gulp.task('browserify', function () {
-    var browserified = transform(function(filename) {
-        var b = browserify(filename);
-        return b.bundle();
-    });
-
-    return gulp.src(['./src/client/_build/*.js'])
-        .pipe(browserified)
-        //.pipe(uglify())
+gulp.task('browserify', function(){
+    var b = browserify();
+    b.transform(reactify); // use the reactify transform
+    b.add('./src/client/app.jsx');
+    return b.bundle()
+        .pipe(source('bundle.js'))
         .pipe(gulp.dest('./dist'));
 });
