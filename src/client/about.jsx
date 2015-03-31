@@ -4,6 +4,7 @@
 
 var React = require("react");
 
+
 var AboutGui = React.createClass({
 
     render: function () {
@@ -19,7 +20,8 @@ var About = React.createClass({
     render: function () {
         return (
             <div>
-                <AboutGui />
+
+                <h1>About!</h1>
             </div>
         );
     }

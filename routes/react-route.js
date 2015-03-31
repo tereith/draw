@@ -15,4 +15,4 @@ router.get("/", function(req, res) {
    res.render("react", {title: "** React test **", message: "Testing React JS"});
 });
 
-module.exports = router;
+//module.exports = router;
