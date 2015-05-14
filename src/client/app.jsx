@@ -60,7 +60,6 @@ var Home = React.createClass({
 
 var routes = (
     <Route name="app" path="/" handler={App}>
-        <NotFoundRoute handler={NotFound} />
         <DefaultRoute handler={Home}/>
         <Route name="about" handler={About}/>
         <Route name="react" handler={ReactDemo}/>
